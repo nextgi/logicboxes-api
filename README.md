@@ -23,8 +23,8 @@ composer require nextgi/logicboxes-api
 ```php
 use nextgi\LogicBoxes\ResellerApi;
 
-// In our example, we are using ResellerClub
-$registrar = new ResellerApi('<provider>', '<userId>', '<apiKey>');
+// In our example, we are using ResellerClub. Provider make no difference if they use LogicBoxes. 
+$registrar = new ResellerApi('<userId>', '<apiKey>');
 $registrar->domains()->available(['google', 'example'], ['com', 'net']);
 ```
 
