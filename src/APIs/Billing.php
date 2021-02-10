@@ -1,14 +1,14 @@
 <?php
 
-namespace digicatech\ResellerClub\APIs;
+namespace nextgi\LogicBoxes\APIs;
 
 use Exception;
-use digicatech\ResellerClub\Helper;
+use nextgi\LogicBoxes\Helper;
 
 /**
  * Class Billing
  *
- * @package digicatech\ResellerClub\APIs
+ * @package nextgi\LogicBoxes\APIs
  */
 class Billing
 {

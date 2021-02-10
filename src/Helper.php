@@ -1,6 +1,6 @@
 <?php
 
-namespace digicatech\ResellerClub;
+namespace nextgi\LogicBoxes;
 
 use Exception;
 use GuzzleHttp\Client as Guzzle;
@@ -13,7 +13,7 @@ use SimpleXMLElement;
 
 /**
  * Trait Helper
- * @package digicatech\ResellerClub
+ * @package nextgi\LogicBoxes
  */
 trait Helper
 {

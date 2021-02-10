@@ -1,16 +1,16 @@
 {
-    "name": "digicatech/resellerclub-php-api",
-    "description": "PHP SDK for ResellerClub API",
+    "name": "nextgi/logicboxes-api",
+    "description": "PHP SDK for the LogicBoxes API platform.",
     "type": "library",
     "license": "MIT",
 	"authors": [
 		{
-		  "name": "Digicatech OÜ",
-		  "email": "info@digicatech.com"
+		  "name": "NextGi",
+		  "email": "dev@nextgi.com"
 		},
 		{
-		  "name": "Digicatech TR",
-		  "email": "info@digicatech.com.tr"
+		  "name": "Zak",
+		  "email": "zharding@nextgi.com"
 		}
 	],
     "require": {
@@ -21,7 +21,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"digicatech\\ResellerClub\\": "src/"
+			"nextgi\\LogicBoxes\\": "src/"
 		}
     },
 	"config": {

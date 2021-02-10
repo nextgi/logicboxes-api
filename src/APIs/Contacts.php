@@ -1,15 +1,15 @@
 <?php
 
-namespace digicatech\ResellerClub\APIs;
+namespace nextgi\LogicBoxes\APIs;
 
 use Exception;
-use digicatech\ResellerClub\Helper;
+use nextgi\LogicBoxes\Helper;
 use SimpleXMLElement;
 
 /**
  * Class Contacts
  *
- * @package digicatech\ResellerClub\APIs
+ * @package nextgi\LogicBoxes\APIs
  */
 class Contacts
 {

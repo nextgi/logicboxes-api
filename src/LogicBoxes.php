@@ -1,23 +1,23 @@
 <?php
 
-namespace digicatech\ResellerClub;
+namespace nextgi\LogicBoxes;
 
 use GuzzleHttp\Client as Guzzle;
-use digicatech\ResellerClub\APIs\Actions;
-use digicatech\ResellerClub\APIs\Billing;
-use digicatech\ResellerClub\APIs\Contacts;
-use digicatech\ResellerClub\APIs\Customers;
-use digicatech\ResellerClub\APIs\Domains;
-use digicatech\ResellerClub\APIs\Orders;
-use digicatech\ResellerClub\APIs\Products;
-use digicatech\ResellerClub\APIs\Dns;
+use nextgi\LogicBoxes\APIs\Actions;
+use nextgi\LogicBoxes\APIs\Billing;
+use nextgi\LogicBoxes\APIs\Contacts;
+use nextgi\LogicBoxes\APIs\Customers;
+use nextgi\LogicBoxes\APIs\Domains;
+use nextgi\LogicBoxes\APIs\Orders;
+use nextgi\LogicBoxes\APIs\Products;
+use nextgi\LogicBoxes\APIs\Dns;
 
 /**
- * Class ResellerClub
+ * Class ResellerApi
  *
- * @package digicatech\ResellerClub
+ * @package nextgi\LogicBoxes
  */
-class ResellerClub
+class ResellerApi
 {
     const API_URL = 'https://httpapi.com/api/';
     const API_TEST_URL = 'https://test.httpapi.com/api/';
@@ -42,7 +42,7 @@ class ResellerClub
     private $authentication = [];
 
     /**
-     * ResellerClub constructor.
+     * ResellerApi constructor.
      *
      * @param int    $userId
      * @param string $apiKey
@@ -88,7 +88,7 @@ class ResellerClub
     private function _getAPI($api)
     {
         if (empty($this->apiList[$api])) {
-            $class = 'digicatech\\ResellerClub\\APIs\\'.$api;
+            $class = 'nextgi\\LogicBoxes\\APIs\\'.$api;
             $this->apiList[$api] = new $class(
                 $this->guzzle,
                 $this->authentication
