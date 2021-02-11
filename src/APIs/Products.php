@@ -30,16 +30,28 @@ class Products
     }
 
     /**
-     * Gets the details of the all active product plans of the Reseller.
+     * Gets the details of the all active product plans of the Reseller. Does not include Domains
      *
      * @return array|Exception
      * @throws Exception
-     * @link https://resellerclub.webpropanel.com/kb/get-product-plan-details-api
+     * @link https://manage.logicboxes.com/kb/node/939
      * @todo Add optional parameters
      */
     public function planDetails($productKey = "")
     {
         return $this->get('plan-details', ['product-key' => $productKey]);
+    }
+
+    /**
+     * Gets the details of the all active domain products of the Reseller. Only returns domains
+	 *
+     * @return array|Exception
+     * @throws Exception
+     * @link https://manage.logicboxes.com/kb/node/833
+     */
+    public function productList()
+    {
+        return $this->get('details');
     }
 
     /**
