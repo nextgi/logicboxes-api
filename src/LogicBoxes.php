@@ -99,6 +99,14 @@ class ResellerApi
     }
 
     /**
+     * @return Resellers
+     */
+    public function resellers()
+    {
+        return $this->_getAPI('Resellers');
+    }
+
+    /**
      * @return Domains
      */
     public function domains()

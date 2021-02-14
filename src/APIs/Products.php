@@ -30,6 +30,18 @@ class Products
     }
 
     /**
+     * Get reseller pricing
+     *
+     * @return array|Exception
+     * @throws Exception
+     * @link https://manage.logicboxes.com/kb/node/865
+     */
+    public function resellerPrice($resellerId = "")
+    {
+        return $this->get('reseller-cost-price' , ['reseller-id' => $resellerId]);
+    }
+
+    /**
      * Gets the details of the all active product plans of the Reseller. Does not include Domains
      *
      * @return array|Exception
