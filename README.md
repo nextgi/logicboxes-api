@@ -1,7 +1,8 @@
 # Description
 This library is designed to work with providers that operate on the LogicBoxes architecture. Some include:
  * ResellerClub ([Docs](https://resellerclub.webpropanel.com/kb/answer/751))
- * LogicBoxes ([Docs] (https://manage.logicboxes.com/kb))
+ * LogicBoxes 
+ ([Docs](https://manage.logicboxes.com/kb))
  
 Available API requests: 
 * Actions
@@ -12,9 +13,9 @@ Available API requests:
 * Domains
 * Orders
 * Products
-** Customer Pricing
-** Reseller Pricing
-** Active Reseller Promotions
+   * Customer Pricing
+   * Reseller Pricing
+   * Active Reseller Promotions
 
 
 ## Installation
