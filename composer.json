@@ -1,0 +1,32 @@
+{
+    "name": "nextgi/logicboxes-api",
+    "description": "PHP SDK for the LogicBoxes API platform.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NextGi"
+        }
+    ],
+    "require": {
+		"ext-curl": "*",
+		"guzzlehttp/guzzle": "*",
+		"ext-simplexml": "*",
+		"ext-json": "*"
+	},
+    "require-dev": {
+        "orchestra/testbench": "^8.5"
+    },
+    "autoload": {
+		"psr-4": {
+			"nextgi\\LogicBoxes\\": "src/"
+		}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "nextgi\\LogicBoxes\\": "tests/"
+        }
+    },
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
