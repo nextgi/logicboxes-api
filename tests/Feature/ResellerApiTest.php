@@ -2,13 +2,12 @@
 
 namespace nextgi\LogicBoxes\Tests;
 
-use Orchestra\Testbench\TestCase;
-
 use nextgi\LogicBoxes\ResellerApi;
 
 use nextgi\LogicBoxes\Utils\Domains;
 use nextgi\LogicBoxes\Utils\Actions;
 
+use nextgi\LogicBoxes\TestCase;
 
 class ResellerApiTest extends TestCase {
 
