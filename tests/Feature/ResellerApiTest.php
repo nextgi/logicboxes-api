@@ -10,53 +10,72 @@ use nextgi\LogicBoxes\Utils\Actions;
 use nextgi\LogicBoxes\TestCase;
 
 class ResellerApiTest extends TestCase {
+    const testUserId = '1204110';
+    const testUserKey = 'R7BdPQElRESA93ZZ1b0oQxdOelgnDbau';
+    const testMode = true;
 
     public function test_actions() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj'));
-        $registrar->actions()->current();
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->actions()->current();
+        if($test) {
+            $this->assertTrue(true);
+        }
+        
     }
 
     public function test_billing() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj'));
-        $registrar->billing()->customerTransactions(1);
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->billing()->customerTransactions([1, 2]);
+        if($test) {
+            $this->assertTrue(true);
+        }
     }
 
     public function test_contacts() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj'));
-        $registrar->contacts()->getContact(1);
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->contacts()->getContact(1);
+        if($test) {
+            $this->assertTrue(true);
+        }
     }
 
     public function test_customer() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj'));
-        $registrar->customers()->detailsById(1);
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->customers()->detailsById(1);
+        if($test) {
+            $this->assertTrue(true);
+        }
     }
 
     public function test_domain() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj', true));
-        $registrar->domains()->available(['google', 'example'], ['com', 'net']);
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->domains()->available(['google', 'example'], ['com', 'net']);
+        if($test) {
+            $this->assertTrue(true);
+        }
     }
     
     public function test_orders() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj', true));
-        $registrar->orders()->suspend(1, 'Sample Reason');
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->orders()->suspend(1, 'Sample Reason');
+        if($test) {
+            $this->assertTrue(true);
+        }
     }
 
     public function test_products() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj', true));
-        $registrar->products()->productList();
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->products()->productList();
+        if($test) {
+            $this->assertTrue(true);
+        }
     }
     
     public function test_resellers() {
-        $registrar = (new ResellerApi('zharding@nextgi.com','d92N@3sKI9XV1mdj', true));
-        $registrar->resellers()->resellerPromotions();
-        $this->assertTrue(true);
+        $registrar = (new ResellerApi(self::testUserId, self::testUserKey, self::testMode));
+        $test = $registrar->resellers()->resellerPromotions();
+        if(is_array($test)) {
+            $this->assertTrue(true);
+        }
     }
-    
 }

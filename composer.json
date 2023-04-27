@@ -1,5 +1,5 @@
 {
-    "name": "nextgi/logicboxes-api-test",
+    "name": "nextgi/logicboxes-api",
     "description": "PHP SDK for the LogicBoxes API platform.",
     "type": "library",
     "license": "MIT",
